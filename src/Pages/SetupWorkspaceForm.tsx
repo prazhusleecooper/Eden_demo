@@ -55,6 +55,8 @@ const SetupWorkspaceForm = () => {
 
     useEffect(() => {
 
+        document.title = 'Setup your workspace | Eden';
+
         // ? Navigate to STEP - I if its not completed
         if(!(stepCompleted > 0) ) {
 
@@ -94,7 +96,7 @@ const SetupWorkspaceForm = () => {
     // * End of handleFormSubmit();
 
     // * End of Non-Rendering Methods
-
+    
     return(
         <div className={ classes.onboardingFormSection }>
             <span className={ classes.formTitle }>

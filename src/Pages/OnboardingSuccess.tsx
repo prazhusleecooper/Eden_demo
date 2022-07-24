@@ -30,6 +30,8 @@ const OnboardingSuccess = () => {
 
     useEffect(() => {
 
+        document.title = 'Onboarding Success | Eden';
+
         // ? Navigate to STEP - I if its not completed
         if(!(stepCompleted > 2) ) {
 

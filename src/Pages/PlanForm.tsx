@@ -10,7 +10,7 @@ import classes from '../Styling/Pages/OnboardingForm.module.scss';
 
 
 const PlanForm = () => {
-    
+
     // ? Used for page redirection
     const navigate = useNavigate();
 
@@ -73,6 +73,8 @@ const PlanForm = () => {
     // * End of Non-Rendering Methods
 
     useEffect(() => {
+
+        document.title = 'Choose your plan | Eden';
 
         // ? Navigate to STEP - I if its not completed
         if(!(stepCompleted > 1) ) {

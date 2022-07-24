@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 import { useAppDispatch, useAppSelector } from '../Utils/hooks';
@@ -72,6 +72,11 @@ const WelcomeForm = () => {
 
     // * End of Non-Rendering Methods
 
+    useEffect(() => {
+
+        document.title = 'Welcome to Eden | Eden';
+
+    }, []);
 
     return(
         <div className={ classes.onboardingFormSection }>
