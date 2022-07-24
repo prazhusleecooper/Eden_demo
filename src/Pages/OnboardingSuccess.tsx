@@ -38,7 +38,7 @@ const OnboardingSuccess = () => {
             </div>
 
             <span className={ classes.formTitle }>
-                Congratulations, { fullName }!
+                Congratulations, { fullName.trim() }!
             </span>
 
             <span className={ classes.formSubTitle }>
