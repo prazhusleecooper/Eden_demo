@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+// ? VARIABLES
+// * COLOR VARIABLES
+$primary-purple: rgb(102, 76, 229);
+$border-light-grey: rgb(239, 243, 246);
+$background-white: #FFFFFF;
+$background-grey: rgb(248, 249, 253);
+
+$text-title: rgb(25, 31, 45);
+$text-white: #FFFFFF;
+$text-black: #000000;
+$text-grey: rgb(116, 121, 134);
+$text-light-grey: rgb(197, 205, 222);
+$text-form-label: rgb(78, 86, 104);
+$text-error: rgb(226, 0, 0);
+
+$input-border: rgb(238, 239, 243);
+$input-error-border: rgb(226, 0, 0);
+$input-placeholder: rgb(222, 224, 228);
+* {
+    font-family: Inter;
+}

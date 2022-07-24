@@ -1,0 +1,27 @@
+@import '../Global.scss';
+
+.LogoTitleSection {
+
+    .LogoTitleContainer {
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        grid-gap: 5px;
+        
+        img {
+            width: 45px;
+            height: 42px;
+        }
+        
+        span {
+            font-size: 35px;
+            font-weight: 700;
+            letter-spacing: -0.075em;
+            color: $text-title;
+        }
+    
+    }
+
+}
