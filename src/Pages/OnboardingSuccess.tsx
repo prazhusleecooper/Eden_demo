@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { useAppDispatch, useAppSelector } from '../Utils/hooks';
 
@@ -7,8 +8,11 @@ import classes from '../Styling/Pages/OnboardingForm.module.scss';
 
 const OnboardingSuccess = () => {
     
+    // ? Used for page redirection
+    const navigate = useNavigate();
+
     // ? Redux data
-    const dispatch = useAppDispatch();
+    const stepCompleted = useAppSelector((state) => state.workspace.stepCompleted);
 
     const fullName = useAppSelector((state) => state.workspace.fullName);
 
@@ -23,6 +27,18 @@ const OnboardingSuccess = () => {
     // * End of handleFormSubmit();
 
     // * End of Non-Rendering Methods
+
+    useEffect(() => {
+
+        // ? Navigate to STEP - I if its not completed
+        if(!(stepCompleted > 2) ) {
+
+            navigate('/welcome');
+    
+        }
+
+        // eslint-disable-next-line
+    }, []);
 
     return(
         <div className={ classes.onboardingFormSection }>

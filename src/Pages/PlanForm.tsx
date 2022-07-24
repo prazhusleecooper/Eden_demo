@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 import { useAppDispatch, useAppSelector } from '../Utils/hooks';
@@ -16,6 +16,8 @@ const PlanForm = () => {
 
     // ? Redux data
     const dispatch = useAppDispatch()
+
+    const stepCompleted = useAppSelector((state) => state.workspace.stepCompleted);
 
     const planSaved = useAppSelector((state) => state.workspace.plan);
  
@@ -69,6 +71,18 @@ const PlanForm = () => {
     // * End of handleFormSubmit();
 
     // * End of Non-Rendering Methods
+
+    useEffect(() => {
+
+        // ? Navigate to STEP - I if its not completed
+        if(!(stepCompleted > 1) ) {
+
+            navigate('/welcome');
+    
+        }
+
+        // eslint-disable-next-line
+    }, []);
 
     return(
         <div className={ classes.onboardingFormSection }>
