@@ -1,11 +1,17 @@
 import React from 'react';
 
-import { checkIcon } from '../Utils/Icons';
+import { useAppDispatch, useAppSelector } from '../Utils/hooks';
 
+import { checkIcon } from '../Utils/Icons';
 import classes from '../Styling/Pages/OnboardingForm.module.scss';
 
 const OnboardingSuccess = () => {
     
+    // ? Redux data
+    const dispatch = useAppDispatch();
+
+    const fullName = useAppSelector((state) => state.workspace.fullName);
+
     // ? Non-Rendering Methods
     
     // ? Method to handle the form submit 
@@ -32,7 +38,7 @@ const OnboardingSuccess = () => {
             </div>
 
             <span className={ classes.formTitle }>
-                Congratulations, Eren!
+                Congratulations, { fullName }!
             </span>
 
             <span className={ classes.formSubTitle }>
